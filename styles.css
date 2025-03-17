@@ -1,0 +1,187 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container { 
+    display: flex;
+    flex-direction: column; /* Asegura que todo dentro del contenedor esté en columna */
+    align-items: center; /* Centra los elementos en la pantalla */
+    background-color: green;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 4.5rem;
+    z-index: 1000;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+}
+
+.menu-container {
+    flex: 1; /* Ocupa el espacio restante después del logo */
+    display: flex;
+    justify-content: center; /* Centra el menú */
+}
+
+.menu {
+    display: flex;
+    width: 60%; /* IMPORTANTE: Ajusta el ancho del menú */
+    justify-content: space-evenly; /* Espacia los elementos uniformemente */
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu li {
+    white-space: nowrap; /* Evita que los elementos se compriman */
+}
+
+.logo {
+    height: 6rem;
+    width: 5rem;
+    margin-left: 0.6rem; /* Mantiene el logo a 10px del borde */
+}
+
+
+
+.banner {
+    background-image: url('./images/IMG_7577.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;  
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.banner h1 {
+    color: blue;
+    font-size: 9.6rem;
+    margin: 0; /* Elimina cualquier margen predeterminado */
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        /* Quitar la altura fija y usar un padding-top para mantener la proporción */
+        height: auto;
+        padding-top: 56.25%;  /* Aproximadamente 16:9, ajusta según la proporción de tu imagen */
+        background-size: contain; /* Muestra la imagen completa sin recortarla */
+    }
+}
+
+.intro {
+    height: 13rem;
+    background-color: green;
+    margin: 0; /* Elimina espacios adicionales */
+    padding: 0;
+}
+
+.intro div {
+    margin: 0; /* Asegura que no haya margen interno */
+    padding: 0;
+}
+
+.intro p {
+    text-align: center;
+    padding: 3rem 0 0 0; /* Mantiene el espacio solo arriba del texto */
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0; /* Elimina cualquier margen que pueda causar el espacio en blanco */
+}
+
+h2 {
+
+    font-size: 3rem;
+    text-align: center;
+}
+
+h3 {
+
+    font-size: 2rem;
+}
+
+.iniciativas {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-evenly; /* Espaciado uniforme entre los elementos */
+    align-items: stretch;
+    gap: 2.5rem;
+    background-color: green;
+    max-width: 79rem; /* Asegura que la sección no sea demasiado ancha */
+    margin: 0 auto; /* Centra la sección automáticamente */
+}
+
+.iniciativas li {
+    flex: 1;
+    min-width: 19rem;
+    max-width: 28.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: red;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+.iniciativas img {
+    width: 100%;
+    max-width: 16rem; /* Se asegura que todas las imágenes tengan el mismo tamaño */
+    height: auto;
+}
+
+.iniciativas p {
+    text-align: justify;
+    font-size: 1.33rem;
+    flex-grow: 1; /* Hace que el texto ocupe el espacio disponible */
+}
+
+
+
+.equipo {
+
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+
+.equipo li {
+    flex: 1 1 15rem; /* Controla el tamaño de los elementos */
+    max-width: 22rem; /* Asegura que no crezcan demasiado */
+    text-align: center;
+}
+
+.equipo img {
+
+    height: auto;
+    width: 15rem;
+
+}
+
+footer {
+
+    text-align: center;
+    background-color: red;
+    padding-top: 3rem;
+
+}
